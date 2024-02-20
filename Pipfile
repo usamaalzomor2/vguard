@@ -10,6 +10,8 @@ djangorestframework-simplejwt = "*"
 drfpasswordless = "*"
 psycopg2 = "*"
 pillow = "*"
+gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
