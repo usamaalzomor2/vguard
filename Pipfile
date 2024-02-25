@@ -12,6 +12,7 @@ psycopg2 = "*"
 pillow = "*"
 gunicorn = "*"
 dj-database-url = "*"
+django-rest-framework = "*"
 
 [dev-packages]
 
