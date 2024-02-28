@@ -31,3 +31,6 @@ class LicensePlateRecognitionSerializer(serializers.ModelSerializer):
         model = LicensePlateRecognition
         fields = ["camera", "plate_number"]
 
+class DateRangeSerializer(serializers.Serializer):
+    start_date = serializers.DateTimeField()
+    end_date = serializers.DateTimeField()
