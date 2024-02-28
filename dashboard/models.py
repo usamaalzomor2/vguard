@@ -68,7 +68,7 @@ class FireSmokeWeaponDetection(Base):
         return self.alarm_title
 
 
-class AgeGender(models.Model):
+class AgeGender(Base):
     male_kids = models.IntegerField(default=0)
     female_kids = models.IntegerField(default=0)
     male_teens = models.IntegerField(default=0)
