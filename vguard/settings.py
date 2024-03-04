@@ -100,7 +100,7 @@ DATABASES = {
 SECRET_KEY =  os.environ['SECRET_KEY']
 
 
-ALLOWED_HOSTS = ['vguard-production.up.railway.app',]
+ALLOWED_HOSTS = ["*"]
 
 
 # Password validation
