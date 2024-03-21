@@ -39,6 +39,7 @@ class LicensePlateRecognitionViewSet(viewsets.ModelViewSet):
         camera_id = self.request.query_params.get('camera_id')
         if camera_id:
             queryset = queryset.filter(camera=camera_id)
+        queryset = queryset.order_by('-created_at')
         return queryset
     
 class AgeGenderSummaryView(APIView):

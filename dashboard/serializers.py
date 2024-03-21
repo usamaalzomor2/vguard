@@ -29,7 +29,7 @@ class FaceRecognitionSerializer(serializers.ModelSerializer):
 class LicensePlateRecognitionSerializer(serializers.ModelSerializer):
     class Meta:
         model = LicensePlateRecognition
-        fields = ["camera", "plate_number"]
+        fields = ["camera", "plate_number", "created_at"]
 
 class DateRangeSerializer(serializers.Serializer):
     start_date = serializers.DateTimeField()
