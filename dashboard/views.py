@@ -28,6 +28,16 @@ class FaceRecognitionViewSet(viewsets.ModelViewSet):
     queryset = FaceRecognition.objects.all()
     serializer_class = FaceRecognitionSerializer
 
+    pagination_class = DefaultPagination
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        camera_id = self.request.query_params.get('camera_id')
+        if camera_id:
+            queryset = queryset.filter(camera=camera_id)
+        queryset = queryset.order_by('-created_at')
+        return queryset
+
 class LicensePlateRecognitionViewSet(viewsets.ModelViewSet):
     queryset = LicensePlateRecognition.objects.all()
     serializer_class = LicensePlateRecognitionSerializer
